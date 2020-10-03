@@ -7,7 +7,6 @@ type SearchProps = {
   onChange: (newValue: String) => void,
 }
 
-
 export function Search({onChange}: SearchProps): JSX.Element {
   const handleChange=(event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     onChange((event.target as HTMLInputElement).value);
