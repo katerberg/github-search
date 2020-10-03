@@ -15,4 +15,13 @@ describe(App, () => {
 
     expect(getByRole('progressbar')).toBeInTheDocument();
   });
+
+  it('shows results when the loader is done', () => {
+    useFetch.mockImplementation(()=> ({data: [{}]}));
+
+    const {getByRole, getByText} = render(<App />);
+
+    expect(getByRole('progressbar')).not.toBeInTheDocument();
+    expect(getByText('My User')).toBeInTheDocument();
+  });
 });

@@ -1,0 +1,7 @@
+.UserDetails .UserDetails-info {
+  display: flex;
+  flex-direction: row;
+}
+.UserDetails .UserDetails-info svg {
+  margin-right: 1rem;
+}

@@ -1,3 +1,19 @@
 .User {
-  color:tomato;
+  width: 600px;
+  display:flex;
+  flex-direction: row;
+}
+
+.User .spacer {
+  flex-grow: 1;
+}
+
+.User .User-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.User .User-picture {
+  width: 210px;
+  height: 210px;
 }
