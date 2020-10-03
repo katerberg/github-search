@@ -6,12 +6,13 @@ import {User} from '../User';
 import './index.css';
 
 export function App() {
-  const [query, setQuery] = useState('katerberg');
+  const [query, setQuery] = useState('');
   const {data = [], loading} = useFetch(`https://api.github.com/search/users?q=${query}`, {}, [query]);
 
   const handleChange = (newValue) => {
     setQuery(newValue);
   };
+
   return (
     <div className="App">
       <AppBar className="App-appbar" position="static">
@@ -20,7 +21,7 @@ export function App() {
         </Typography>
         <Search onChange={handleChange} />
       </AppBar>
-      <Container maxWidth="sm">
+      <Container className="App-userlist" maxWidth="sm">
         {loading && <CircularProgress />}
         {!loading && data?.items && data.items.map(userData => <User key={userData.login} data={userData} />)}
       </Container>

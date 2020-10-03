@@ -8,3 +8,7 @@
   display: inline-block;
   margin-right: 1rem;
 }
+
+.App .App-userlist * {
+  margin: 1rem;
+}
