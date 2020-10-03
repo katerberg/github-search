@@ -1,12 +1,13 @@
-import {AppBar, Button, CircularProgress, Container, Typography} from '@material-ui/core';
+import {AppBar, CircularProgress, Container, Typography} from '@material-ui/core';
 import React, {useState} from 'react';
 import {useFetch} from 'use-http';
 import {Search} from '../Search';
+import {User} from '../User';
 import './index.css';
 
 export function App() {
-  const [query, setQuery] = useState('');
-  const {data, loading} = useFetch(`https://api.githubz.com/search/users?q=${query}`, {}, [query]);
+  const [query, setQuery] = useState('katerberg');
+  const {data = [], loading} = useFetch(`https://api.github.com/search/users?q=${query}`, {}, [query]);
 
   const handleChange = (newValue) => {
     setQuery(newValue);
@@ -21,8 +22,7 @@ export function App() {
       </AppBar>
       <Container maxWidth="sm">
         {loading && <CircularProgress />}
-        {!loading && <Button>{'data'}</Button>}
-        {JSON.stringify(data)}
+        {!loading && data?.items && data.items.map(userData => <User key={userData.login} data={userData} />)}
       </Container>
     </div>
   );
