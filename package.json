@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@material-ui/icons": "^4.9.1",
-    "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
@@ -36,11 +35,13 @@
   },
   "devDependencies": {
     "@material-ui/core": "^4.11.0",
+    "@testing-library/jest-dom": "^4.2.4",
     "@types/jest": "^24.9.1",
     "@types/material-ui": "^0.21.8",
     "@types/node": "^12.12.62",
     "@types/react": "^16.9.50",
     "@types/react-dom": "^16.9.8",
+    "@types/testing-library__jest-dom": "^5.9.4",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
     "eslint-config-airbnb": "^18.2.0",

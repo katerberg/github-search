@@ -1,11 +1,14 @@
 import {render} from '@testing-library/react';
 import React from 'react';
-import {App} from './App';
+import {Search} from '.';
 
-describe('App', () => {
+describe(Search, () => {
   it('renders learn react link', () => {
-    const {getByText} = render(<App />);
-    const linkElement = getByText(/learn react/i);
-    expect(linkElement).toBeInTheDocument();
+    const mock = jest.fn();
+    const {getByPlaceholderText} = render(<Search onChange={mock} />);
+
+    const textField = getByPlaceholderText('Search...');
+
+    expect(textField).toBeInTheDocument();
   });
 });

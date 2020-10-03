@@ -2,10 +2,12 @@ import {render} from '@testing-library/react';
 import React from 'react';
 import {App} from './App';
 
-describe('App', () => {
+describe(App, () => {
   it('renders learn react link', () => {
     const {getByText} = render(<App />);
-    const linkElement = getByText(/learn react/i);
-    expect(linkElement).toBeInTheDocument();
+
+    const button = getByText('hello');
+
+    expect(button).toBeInTheDocument();
   });
 });
