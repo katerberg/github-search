@@ -1,21 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import Button from '@material-ui/core/Button';
+import {AppBar, Button, Container, InputBase, Typography} from '@material-ui/core';
+import {Search} from './Search';
 import './App.css';
 
 export function App(): JSX.Element {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Button>hello</Button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+      <AppBar className="App-appbar" position="static">
+        <Typography className="App-header" variant="h6" component="h1">Github Searcher</Typography>
+        <Search />
+      </AppBar>
+      <Container maxWidth="sm">
+          <Button>hello</Button>
+      </Container>
     </div>
   );
 }

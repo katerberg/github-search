@@ -1,0 +1,15 @@
+.Search {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.Search .Search-icon {
+  position: absolute;
+}
+
+.Search .Search-input {
+  padding-left: 2rem;
+  color: white;
+}
