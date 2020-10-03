@@ -3,6 +3,7 @@
   flex-direction: row;
   margin-top: auto;
   margin-bottom: auto;
+  flex-grow: 1;
 }
 
 .Search .Search-icon {
@@ -12,4 +13,5 @@
 .Search .Search-input {
   padding-left: 2rem;
   color: white;
+  flex-grow: 1;
 }
