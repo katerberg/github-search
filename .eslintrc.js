@@ -29,8 +29,9 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/explicit-function-return-type': 'error',
-    '@typescript-eslint/ban-ts-ignore': 'error',
+    '@typescript-eslint/ban-ts-comment': 'error',
     'global-require': 'error',
+    'import/extensions': 'off',
     'import/no-default-export': 'error',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/order': [
