@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import Button from '@material-ui/core/Button';
 import './App.css';
 
 export function App(): JSX.Element {
@@ -7,6 +8,7 @@ export function App(): JSX.Element {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <Button>hello</Button>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
