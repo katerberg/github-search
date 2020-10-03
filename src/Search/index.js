@@ -3,13 +3,9 @@ import SearchIcon from '@material-ui/icons/Search';
 import React from 'react';
 import './index.css';
 
-type SearchProps = {
-  onChange: (newValue: string) => void;
-};
-
-export function Search({onChange}: SearchProps): JSX.Element {
-  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>): void => {
-    onChange((event.target as HTMLInputElement).value);
+export function Search({onChange}) {
+  const handleChange = (event) => {
+    onChange(event.target.value);
   };
 
   return (

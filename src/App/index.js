@@ -4,11 +4,11 @@ import {useFetch} from 'use-http';
 import {Search} from '../Search';
 import './index.css';
 
-export function App(): JSX.Element {
-  const [query, setQuery] = useState<string>('');
-  const {data, loading} = useFetch(`https://api.github.com/search/users?q=${query}`, {}, [query]);
+export function App() {
+  const [query, setQuery] = useState('');
+  const {data, loading} = useFetch(`https://api.githubz.com/search/users?q=${query}`, {}, [query]);
 
-  const handleChange = (newValue: string): void => {
+  const handleChange = (newValue) => {
     setQuery(newValue);
   };
   return (
@@ -21,7 +21,8 @@ export function App(): JSX.Element {
       </AppBar>
       <Container maxWidth="sm">
         {loading && <CircularProgress />}
-        {!loading && <Button>{data}</Button>}
+        {!loading && <Button>{'data'}</Button>}
+        {JSON.stringify(data)}
       </Container>
     </div>
   );
