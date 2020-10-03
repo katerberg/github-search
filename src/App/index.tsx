@@ -1,26 +1,27 @@
-import React, { useState } from 'react';
 import {AppBar, Button, CircularProgress, Container, Typography} from '@material-ui/core';
-import {Search} from '../Search';
+import React, {useState} from 'react';
 import {useFetch} from 'use-http';
+import {Search} from '../Search';
 import './index.css';
 
 export function App(): JSX.Element {
-  const [query, setQuery] = useState<String>('');
-  const { data = [], loading } = useFetch(`https://api.github.com/search/users?q=${query}`, {}, [query]);
-  console.log(data)
+  const [query, setQuery] = useState<string>('');
+  const {data, loading} = useFetch(`https://api.github.com/search/users?q=${query}`, {}, [query]);
 
-  const handleChange = (newValue: String) => {
+  const handleChange = (newValue: string): void => {
     setQuery(newValue);
-  }
+  };
   return (
     <div className="App">
       <AppBar className="App-appbar" position="static">
-        <Typography className="App-header" variant="h6" component="h1">Github Searcher</Typography>
+        <Typography className="App-header" variant="h6" component="h1">
+          Github Searcher
+        </Typography>
         <Search onChange={handleChange} />
       </AppBar>
       <Container maxWidth="sm">
         {loading && <CircularProgress />}
-        {!loading && <Button>hello</Button>}
+        {!loading && <Button>{data}</Button>}
       </Container>
     </div>
   );

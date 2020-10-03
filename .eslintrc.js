@@ -21,6 +21,7 @@ module.exports = {
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended'
   ],
   rules: {
     '@typescript-eslint/no-use-before-define': 'error',
@@ -45,7 +46,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'no-await-in-loop': 'error',
     "no-console": "error",
-    "no-extra-parens":  "error",
+    "no-extra-parens":  "off",
     'no-shadow': 'error',
     "no-template-curly-in-string": "error",
     "class-methods-use-this": ["error", {"exceptMethods": ["render"]}],

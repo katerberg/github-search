@@ -9,7 +9,7 @@ describe(Search, () => {
     const {getByPlaceholderText} = render(<Search onChange={mock} />);
 
     const textField = getByPlaceholderText('Search...');
-    fireEvent.change(textField, {target:{value: expectedValue}});
+    fireEvent.change(textField, {target: {value: expectedValue}});
 
     expect(mock).toHaveBeenCalledWith(expectedValue);
   });
