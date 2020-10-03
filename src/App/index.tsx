@@ -1,7 +1,7 @@
 import React from 'react';
 import {AppBar, Button, Container, InputBase, Typography} from '@material-ui/core';
-import {Search} from './Search';
-import './App.css';
+import {Search} from '../Search';
+import './index.css';
 
 export function App(): JSX.Element {
   const handleChange = (newValue: String) => {
